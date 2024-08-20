@@ -2,354 +2,457 @@
     Variant - Default
 -->
 
-<theme> 
+<theme>
 
     <include>./navigationsounds.xml</include>
-    
-        <include>${rootpath}/_inc/systems/metadata-global/_default.xml</include>
-        <include>${rootpath}/_inc/systems/metadata-global/${system.theme}.xml</include>
-    
-        <variables>
-            <rootpath>./</rootpath>
-            <systemPromoImage>${rootpath}/_inc/systems/fanart/${system.theme}.jpg</systemPromoImage>
-        </variables>
-    
-        <view name="system">
-            <image name="systembackgroundoverlay">
-                <pos>0 0</pos>
-                <size>1 1</size>
-                <path>${rootpath}/_inc/images/defaultsystemgrad.png</path>
-                <zIndex>11</zIndex>
-            </image>
-            <image name="backgroundpromo">
-                <pos>0 0</pos>
-                <size>1 1</size>
-                <path>${systemPromoImage}</path>
-                <interpolation>linear</interpolation>
-                <scrollFadeIn>true</scrollFadeIn>
-                <zIndex>9</zIndex>
-            </image>
 
-            
-            <text name="system-name">
-                <systemdata>fullname</systemdata>
-                <pos>0.053 0.11</pos>
-                <size>0.4 0.2</size>
-                <fontSize>0.065</fontSize>
-                <fontPath>${rootpath}/_inc/fonts/Exo2-BoldCondensed.otf</fontPath>
-                <lineSpacing>1.1</lineSpacing>
-                <color>FFFFFF</color>
-                <verticalAlignment>bottom</verticalAlignment>
-                <container>true</container>
-                <containerStartDelay>1</containerStartDelay>
-                <containerResetDelay>2</containerResetDelay>
-                <letterCase>uppercase</letterCase>
-            </text>
+	<include>${rootpath}/_inc/systems/metadata-global/_default.xml</include>
+	<include>${rootpath}/_inc/systems/metadata-global/${system.theme}.xml</include>
+
+	<variables>
+	    <rootpath>./</rootpath>
+	    <systemPromoImage>${rootpath}/_inc/systems/fanart/${system.theme}.jpg</systemPromoImage>
+	</variables>
+
+	<view name="system">
+	    <image name="systembackgroundoverlay">
+		<pos>0 0</pos>
+		<size>1 1</size>
+		<path>${rootpath}/_inc/images/defaultsystemgrad.png</path>
+		<zIndex>11</zIndex>
+	    </image>
+	    <image name="backgroundpromo">
+		<pos>0 0</pos>
+		<size>1 1</size>
+		<path>${systemPromoImage}</path>
+		<interpolation>linear</interpolation>
+		<scrollFadeIn>true</scrollFadeIn>
+		<zIndex>9</zIndex>
+	    </image>
 
 
-            <text name="gameCount">
-                <pos>0.053 0.26</pos>
-                <size>0.4 0</size>
-                <systemdata>gamecount</systemdata>
-                <fontSize>0.024</fontSize>
-                <fontPath>${rootpath}/_inc/fonts/Exo2-BoldCondensed.otf</fontPath>
-                <lineSpacing>1.1</lineSpacing>
-                <horizontalAlignment>left</horizontalAlignment>
-                <color>FFFFFF</color>
-             </text>
-            <text name="system-year">
-                <text>${systemReleaseYear}</text>
-                <pos>0.053 0.26</pos>
-                <size>0.4 0</size>
-                <fontSize>0.024</fontSize>
-                <fontPath>${rootpath}/_inc/fonts/Exo2-BoldCondensed.otf</fontPath>
-                <lineSpacing>1.1</lineSpacing>
-                <color>FFFFFF</color>
-                <verticalAlignment>center</verticalAlignment>
-                <horizontalAlignment>right</horizontalAlignment>
-            </text>
-            <text name="system-description">
-                <pos>.053 .295</pos>
-                <size>0.4 0.18</size>
-                <text>${systemDescription}</text>
-                <fontSize>0.024</fontSize>
-                <lineSpacing>1.1</lineSpacing>
-                <color>BBBBBB</color>
-                <verticalAlignment>top</verticalAlignment>
-                <container>true</container>
-            </text>
-            <gameselector name="randomselection">
-            </gameselector>
-            <video name="systembackgroundvideo">
-                <pos>.053 .6725</pos>
-                <size>0 0.4</size>
-                <origin>0 0.5</origin>
-                <zIndex>12</zIndex>
-            </video>
+	    <text name="system-name">
+		<systemdata>fullname</systemdata>
+		<pos>0.053 0.11</pos>
+		<size>0.4 0.2</size>
+		<fontSize>0.065</fontSize>
+		<fontPath>${rootpath}/_inc/fonts/Exo2-BoldCondensed.otf</fontPath>
+		<lineSpacing>1.1</lineSpacing>
+		<color>FFFFFF</color>
+		<verticalAlignment>bottom</verticalAlignment>
+		<container>true</container>
+		<containerStartDelay>1</containerStartDelay>
+		<containerResetDelay>2</containerResetDelay>
+		<letterCase>uppercase</letterCase>
+	    </text>
 
+	    <text name="gameCount">
+		<pos>0.053 0.26</pos>
+		<size>0.4 0</size>
+		<systemdata>gamecount</systemdata>
+		<fontSize>0.024</fontSize>
+		<fontPath>${rootpath}/_inc/fonts/Exo2-BoldCondensed.otf</fontPath>
+		<lineSpacing>1.1</lineSpacing>
+		<horizontalAlignment>left</horizontalAlignment>
+		<color>FFFFFF</color>
+	    </text>
 
-            <carousel name="systemCarousel">
-                <pos>1 0.5</pos>
-                <size>0.3 1</size>
-                <origin>1 .5</origin>
-                <type>vertical</type>
-                <staticImage>${rootpath}/_inc/systems/logos/${system.theme}.svg</staticImage>
-                <defaultImage>${rootpath}/_inc/systems/logos/${system.theme}.png</defaultImage>
-                <maxItemCount>6</maxItemCount>
-                <itemSize>0.2 0.125</itemSize>
-                <itemScale>1.35</itemScale>
-                <imageInterpolation>linear</imageInterpolation>
-                <color>00000000</color>
-                <textColor>BBBBBB</textColor>
-                <fontSize>0.055</fontSize>
-                <letterCase>uppercase</letterCase>
-                <lineSpacing>1.2</lineSpacing>
-                <selectedItemMargins>.02 .02</selectedItemMargins>
-                <reflectionsOpacity>.25</reflectionsOpacity>
-                <reflectionsFalloff>1.25</reflectionsFalloff>
-                <unfocusedItemOpacity>0.5</unfocusedItemOpacity>
-                <unfocusedItemDimming>.5</unfocusedItemDimming>
-                <fastScrolling>true</fastScrolling>
-            </carousel>
-            
-        </view>
+	    <text name="system-year">
+		<text>${systemReleaseYear}</text>
+		<pos>0.053 0.26</pos>
+		<size>0.4 0</size>
+		<fontSize>0.024</fontSize>
+		<fontPath>${rootpath}/_inc/fonts/Exo2-BoldCondensed.otf</fontPath>
+		<lineSpacing>1.1</lineSpacing>
+		<color>FFFFFF</color>
+		<verticalAlignment>center</verticalAlignment>
+		<horizontalAlignment>right</horizontalAlignment>
+	    </text>
 
-        <aspectRatio name="16:10">
-            <view name="system">
-                <image name="backgroundpromo">
-                    <size>0 1</size>
-                </image>
-            </view>
-        </aspectRatio>
+	    <text name="system-description">
+		<pos>.053 .295</pos>
+		<size>0.4 0.18</size>
+		<text>${systemDescription}</text>
+		<fontSize>0.024</fontSize>
+		<lineSpacing>1.1</lineSpacing>
+		<color>BBBBBB</color>
+		<verticalAlignment>top</verticalAlignment>
+		<container>true</container>
+	    </text>
+	    <gameselector name="randomselection">
+	    </gameselector>
+	    <video name="systembackgroundvideo">
+		<pos>.053 .6725</pos>
+		<size>0 0.4</size>
+		<origin>0 0.5</origin>
+		<zIndex>12</zIndex>
+	    </video>
 
-        <aspectRatio name="4:3">
-            <view name="system">
-                <image name="backgroundpromo">
-                    <pos>1.15 0</pos>
-                    <size>0 1</size>
-                    <origin>1 0</origin>
-                </image>
+	    <carousel name="systemCarousel">
+		<pos>1 0.5</pos>
+		<size>0.3 1</size>
+		<origin>1 .5</origin>
+		<type>vertical</type>
+		<staticImage>${rootpath}/_inc/systems/logos/${system.theme}.svg</staticImage>
+		<defaultImage>${rootpath}/_inc/systems/logos/${system.theme}.png</defaultImage>
+		<maxItemCount>6</maxItemCount>
+		<itemSize>0.2 0.125</itemSize>
+		<itemScale>1.35</itemScale>
+		<imageInterpolation>linear</imageInterpolation>
+		<color>00000000</color>
+		<textColor>BBBBBB</textColor>
+		<fontSize>0.055</fontSize>
+		<letterCase>uppercase</letterCase>
+		<lineSpacing>1.2</lineSpacing>
+		<selectedItemMargins>.02 .02</selectedItemMargins>
+		<reflectionsOpacity>.25</reflectionsOpacity>
+		<reflectionsFalloff>1.25</reflectionsFalloff>
+		<unfocusedItemOpacity>0.5</unfocusedItemOpacity>
+		<unfocusedItemDimming>.5</unfocusedItemDimming>
+		<fastScrolling>true</fastScrolling>
+	    </carousel>
+	</view>
 
-                <carousel name="systemCarousel">
-                    <pos>.95 0.5</pos>
-                    <size>0.35 1</size>
-                    <itemSize>0.25 0.125</itemSize>
-                </carousel>
-            </view>
-        </aspectRatio>
+	<aspectRatio name="16:10">
+	    <view name="system">
+		<image name="backgroundpromo">
+		    <size>0 1</size>
+		</image>
+	    </view>
+	</aspectRatio>
 
-        <aspectRatio name="19.5:9">
-            <view name="system">
-                <image name="backgroundpromo">
-                    <pos>1 0</pos>
-                    <size>0 1</size>
-                    <origin>1 0</origin>
-                </image>
-                <image name="wideoverlayleft">
-                    <pos>0 0</pos>
-                    <size>0 1</size>
-                    <path>${rootpath}/_inc/images/wideoverlayleft.png</path>
-                    <zIndex>11</zIndex>
-                </image>
-            </view>
-        </aspectRatio>
+	<aspectRatio name="4:3">
+	    <view name="system">
+		<image name="backgroundpromo">
+		    <pos>1.15 0</pos>
+		    <size>0 1</size>
+		    <origin>1 0</origin>
+		</image>
 
-        <view name="gamelist">
-            <image name="gamelistbackgroundoverlay">
-                <pos>0 0</pos>
-                <size>1 1</size>
-                <path>${rootpath}/_inc/images/defaultsystemgrad.png</path>
-                <zIndex>11</zIndex>
-            </image>
-            <image name="gamelistforegroundoverlay">
-                <pos>0 0</pos>
-                <size>1 1</size>
-                <path>${rootpath}/_inc/images/overlay.png</path>
-                <zIndex>55</zIndex>
-            </image>
-            
-            <text name="game-name">
-                <metadata>name</metadata>
-                <pos>0.053 0.11</pos>
-                <size>0.4 0.2</size>
-                <fontSize>0.065</fontSize>
-                <fontPath>${rootpath}/_inc/fonts/Exo2-BoldCondensed.otf</fontPath>
-                <lineSpacing>1.1</lineSpacing>
-                <color>FFFFFF</color>
-                <verticalAlignment>bottom</verticalAlignment>
-                <container>true</container>
-                <containerStartDelay>1</containerStartDelay>
-                <containerResetDelay>2</containerResetDelay>
-                <letterCase>uppercase</letterCase>
-            </text>
+		<carousel name="systemCarousel">
+		    <pos>.95 0.5</pos>
+		    <size>0.35 1</size>
+		    <itemSize>0.25 0.125</itemSize>
+		</carousel>
+	    </view>
+	</aspectRatio>
 
-            <rating name="ratinggraphic">
-                <pos>.053 .272</pos>
-                <origin>0 0.5</origin>
-                <size>0 0.03</size>
-                <filledPath>${rootpath}/_inc/images/star_filled.svg</filledPath>
-                <unfilledPath>${rootpath}/_inc/images/star_unfilled.svg</unfilledPath>
-                <color>FFFFFF</color>
-                <zIndex>65</zIndex>
-            </rating>
-            <image name="players-icon">
-                <pos>.1565 .273</pos>
-                <origin>0 .5</origin>
-                <maxSize>.028 .03</maxSize>
-                <path>${rootpath}/_inc/images/icon-players.svg</path>
-                <color>FFFFFF</color>
-                <metadataElement>true</metadataElement>
-                <zIndex>65</zIndex>
-            </image>
-            <text name="players">
-                <pos>.1765 .273</pos>
-                <origin>0 .5</origin>
-                <size>.02 .03</size>
-                <fontSize>.03</fontSize>
-                <metadata>players</metadata>
-                <defaultValue>?</defaultValue>
-                <color>FFFFFF</color>
-                <lineSpacing>1</lineSpacing>
-                <zIndex>65</zIndex>
-            </text>
-            <badges name="badges">
-                <pos>.205 .273</pos>
-                <origin>0 0.5</origin>
-                <size>.25 .03</size>
-                <horizontalAlignment>left</horizontalAlignment>
-                <direction>row</direction>
-                <lines>1</lines>
-                <itemsPerLine>9</itemsPerLine>
-                <itemMargin>-1 .01</itemMargin>
-                <slots>collection, folder, favorite, completed, kidgame, broken, controller, altemulator, manual</slots>
-                <customBadgeIcon badge="collection">${rootpath}/_inc/images/badge-collection.svg</customBadgeIcon>
-                <customBadgeIcon badge="folder">${rootpath}/_inc/images/badge-folder.svg</customBadgeIcon>
-                <customBadgeIcon badge="favorite">${rootpath}/_inc/images/badge-favorite.svg</customBadgeIcon>
-                <customBadgeIcon badge="completed">${rootpath}/_inc/images/badge-completed.svg</customBadgeIcon>
-                <customBadgeIcon badge="kidgame">${rootpath}/_inc/images/badge-kidgame.svg</customBadgeIcon>
-                <customBadgeIcon badge="broken">${rootpath}/_inc/images/badge-broken.svg</customBadgeIcon>
-                <customBadgeIcon badge="controller">${rootpath}/_inc/images/badge-controller.svg</customBadgeIcon>
-                <customBadgeIcon badge="altemulator">${rootpath}/_inc/images/badge-altemulator.svg</customBadgeIcon>
-                <customBadgeIcon badge="manual">${rootpath}/_inc/images/badge-manual.svg</customBadgeIcon>
-                <controllerIconColor>FFFFFF</controllerIconColor>
-                <controllerSize>1</controllerSize>
-                <zIndex>65</zIndex>
-            </badges>
+	<aspectRatio name="19.5:9">
+	    <view name="system">
+		<image name="backgroundpromo">
+		    <pos>1 0</pos>
+		    <size>0 1</size>
+		    <origin>1 0</origin>
+		</image>
+		<image name="wideoverlayleft">
+		    <pos>0 0</pos>
+		    <size>0 1</size>
+		    <path>${rootpath}/_inc/images/wideoverlayleft.png</path>
+		    <zIndex>11</zIndex>
+		</image>
+	    </view>
+	</aspectRatio>
 
-            <text name="descriptiontext">
-                <pos>.053 .295</pos>
-                <size>0.4 0.18</size>
-                <metadata>description</metadata>
-                <fontSize>0.024</fontSize>
-                <lineSpacing>1.1</lineSpacing>
-                <color>BBBBBB</color>
-                <verticalAlignment>top</verticalAlignment>
-                <container>true</container>
-                <zIndex>46</zIndex>
-            </text>
+	<view name="gamelist">
+	    <image name="gamelistbackgroundoverlay">
+		<pos>0 0</pos>
+		<size>1 1</size>
+		<path>${rootpath}/_inc/images/defaultsystemgrad.png</path>
+		<zIndex>11</zIndex>
+	    </image>
 
-             <video name="gamelistbackgroundvideo">
-                <pos>0.053 0.6725</pos>
-                <size>0 0.4</size>
-                <origin>0 0.5</origin>
-                <imageType>cover</imageType>
-                <delay>2</delay>
-                <zIndex>46</zIndex>
-            </video>
+	    <image name="gamelistforegroundoverlay">
+		<pos>0 0</pos>
+		<size>1 1</size>
+		<path>${rootpath}/_inc/images/overlay.png</path>
+		<zIndex>55</zIndex>
+	    </image>
 
-            <carousel name="gamelistCarousel">
-                <pos>0 0</pos>
-                <size>1.45 1</size>
-                <type>verticalWheel</type>
-                <imageType>marquee</imageType>
-                <itemsBeforeCenter>5</itemsBeforeCenter>
-                <itemsAfterCenter>5</itemsAfterCenter>
-                <itemSize>0.15 0.125</itemSize>
-                <itemScale>1.5</itemScale>
-                <itemRotation>-7</itemRotation>
-                <imageInterpolation>linear</imageInterpolation>
-                <itemRotationOrigin>4.03 0.5</itemRotationOrigin>
-                <itemAxisHorizontal>true</itemAxisHorizontal>
-                <itemHorizontalAlignment>center</itemHorizontalAlignment>
-                <itemVerticalAlignment>center</itemVerticalAlignment>
-                <wheelHorizontalAlignment>left</wheelHorizontalAlignment>
-                <horizontalOffset>0.50</horizontalOffset>
-                <fastScrolling>true</fastScrolling>
-                <color>00000000</color>
-                <textColor>BBBBBB</textColor>
-                <fontSize>0.046</fontSize>
-                <letterCase>uppercase</letterCase>
-                <lineSpacing>1.2</lineSpacing>
-                <unfocusedItemOpacity>1</unfocusedItemOpacity>
-                <zIndex>50</zIndex>
-            </carousel>
-        
+	    <text name="game-name">
+		<metadata>name</metadata>
+		<pos>0.053 0.11</pos>
+		<size>0.4 0.2</size>
+		<fontSize>0.065</fontSize>
+		<fontPath>${rootpath}/_inc/fonts/Exo2-BoldCondensed.otf</fontPath>
+		<lineSpacing>1.1</lineSpacing>
+		<color>FFFFFF</color>
+		<verticalAlignment>bottom</verticalAlignment>
+		<container>true</container>
+		<containerStartDelay>1</containerStartDelay>
+		<containerResetDelay>2</containerResetDelay>
+		<letterCase>uppercase</letterCase>
+	    </text>
 
-            <gamelistinfo name="gamelistInfo">
-                <pos>0.9 0.95</pos>
-                <size>w 0.02</size>
-                <fontSize>0.025</fontSize>
-                <fontPath>${rootpath}/_inc/fonts/Exo2-RegularCondensed.otf</fontPath>
-                <horizontalAlignment>right</horizontalAlignment>
-                <verticalAlignment>bottom</verticalAlignment>
-                <color>BBBBBB</color>
-                <zIndex>65</zIndex>
-            </gamelistinfo>
+	    <rating name="ratinggraphic">
+		<pos>.053 .272</pos>
+		<origin>0 0.5</origin>
+		<size>0 0.03</size>
+		<filledPath>${rootpath}/_inc/images/star_filled.svg</filledPath>
+		<unfilledPath>${rootpath}/_inc/images/star_unfilled.svg</unfilledPath>
+		<color>FFFFFF</color>
+		<zIndex>65</zIndex>
+	    </rating>
 
-            <image name="systemlogo">
-                <pos>.015 .94</pos>
-                <origin>0 .5</origin>
-                <maxSize>.16 .1</maxSize>
-                <path>${rootpath}/_inc/systems/logos/${system.theme}.svg</path>
-                <default>${rootpath}/_inc/systems/logos/${system.theme}.png</default>
-                <interpolation>linear</interpolation>
-                <zIndex>56</zIndex>
-             </image> 
-        
-            <image name="wideoverlayleft">
-                <pos>0 0</pos>
-                <size>0 1</size>
-                <path>${rootpath}/_inc/images/wideoverlayleft.png</path>
-                <zIndex>11</zIndex>
-            </image>
-        </view>
+	    <text name="separator1">
+		<pos>.1413 .273</pos>
+		<origin>0 .5</origin>
+		<size>.01 .03</size>
+		<fontSize>.03</fontSize>
+		<text>•</text>
+		<defaultValue>?</defaultValue>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </text>
 
-        <view name="system, gamelist">
-            <helpsystem name="help">
-                <pos>0.5 0.96</pos>
-                <origin>0.5 0</origin>
-                <textColor>FFFFFF</textColor>
-                <iconColor>FFFFFF</iconColor>
-                <fontSize>0.025</fontSize>
-                <fontPath>${rootpath}/_inc/fonts/Exo2-RegularCondensed.otf</fontPath>
-                <iconTextSpacing>0.003</iconTextSpacing>
-                <originDimmed>0.5 0</originDimmed>
-                <posDimmed>0.5 0.96</posDimmed>
-                <opacity>.35</opacity>
-            </helpsystem>
-        </view>
+	    <datetime name="release">
+		<pos>.1433 .273</pos>
+		<format>%Y</format>
+		<origin>0 .5</origin>
+		<size>.04 .03</size>
+		<fontSize>.03</fontSize>
+		<horizontalAlignment>center</horizontalAlignment>
+		<metadata>releasedate</metadata>
+		<defaultValue>?</defaultValue>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </datetime>
+
+	    <text name="separator2">
+		<pos>.1823 .273</pos>
+		<origin>0 .5</origin>
+		<size>.01 .03</size>
+		<fontSize>.03</fontSize>
+		<text>•</text>
+		<defaultValue>?</defaultValue>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </text>
+
+	    <text name="publisher">
+		<pos>.1903 .273</pos>
+		<origin>0 .5</origin>
+		<size>.18 .03</size>
+		<fontSize>.03</fontSize>
+		<metadata>publisher</metadata>
+		<defaultValue>?</defaultValue>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </text>
+	    
+	    <image name="players-icon">
+		<pos>.053 .305</pos>
+		<origin>0 .5</origin>
+		<maxSize>.028 .03</maxSize>
+		<path>${rootpath}/_inc/images/icon-players.svg</path>
+		<color>FFFFFF</color>
+		<metadataElement>true</metadataElement>
+		<zIndex>65</zIndex>
+	    </image>
+
+	    <text name="players">
+	      <pos>.073 .305</pos>
+		<origin>0 .5</origin>
+		<size>.02 .03</size>
+		<fontSize>.03</fontSize>
+		<metadata>players</metadata>
+		<defaultValue>?</defaultValue>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </text>
+
+	    <!--
+	    <text name="separator3">
+		<pos>.1358 .305</pos>
+		<origin>0 .5</origin>
+		<size>.01 .03</size>
+		<fontSize>.03</fontSize>
+		<text>•</text>
+		<defaultValue>?</defaultValue>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </text>
+
+            -->
+	    
+	    <text name="playcounttext">
+		<pos>.3015 .273</pos>
+		<origin>0 .5</origin>
+		<size>.09 .03</size>
+		<fontSize>.03</fontSize>
+		<text>Playcount:</text>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </text>
+
+	    <text name="playcount">
+		<pos>.3585 .273</pos>
+		<origin>0 .5</origin>
+		<size>.04 .03</size>
+		<fontSize>.03</fontSize>
+		<horizontalAlignment>center</horizontalAlignment>
+		<metadata>playcount</metadata>
+		<defaultValue>?</defaultValue>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </text>
+
+	    <text name="genre">
+		<pos>.0938 .305</pos>
+		<origin>0 .5</origin>
+		<size>.20 .03</size>
+		<fontSize>.03</fontSize>
+		<metadata>genre</metadata>
+		<defaultValue>?</defaultValue>
+		<color>FFFFFF</color>
+		<lineSpacing>1</lineSpacing>
+		<zIndex>65</zIndex>
+	    </text>
+
+	    <badges name="badges">
+		<pos>.3015 .305</pos>
+		<origin>0 0.5</origin>
+		<size>.25 .03</size>
+		<horizontalAlignment>left</horizontalAlignment>
+		<direction>row</direction>
+		<lines>1</lines>
+		<itemsPerLine>9</itemsPerLine>
+		<itemMargin>-1 .01</itemMargin>
+		<slots>collection, folder, favorite, completed, kidgame, broken, controller, altemulator, manual</slots>
+		<customBadgeIcon badge="collection">${rootpath}/_inc/images/badge-collection.svg</customBadgeIcon>
+		<customBadgeIcon badge="folder">${rootpath}/_inc/images/badge-folder.svg</customBadgeIcon>
+		<customBadgeIcon badge="favorite">${rootpath}/_inc/images/badge-favorite.svg</customBadgeIcon>
+		<customBadgeIcon badge="completed">${rootpath}/_inc/images/badge-completed.svg</customBadgeIcon>
+		<customBadgeIcon badge="kidgame">${rootpath}/_inc/images/badge-kidgame.svg</customBadgeIcon>
+		<customBadgeIcon badge="broken">${rootpath}/_inc/images/badge-broken.svg</customBadgeIcon>
+		<customBadgeIcon badge="controller">${rootpath}/_inc/images/badge-controller.svg</customBadgeIcon>
+		<customBadgeIcon badge="altemulator">${rootpath}/_inc/images/badge-altemulator.svg</customBadgeIcon>
+		<customBadgeIcon badge="manual">${rootpath}/_inc/images/badge-manual.svg</customBadgeIcon>
+		<controllerIconColor>FFFFFF</controllerIconColor>
+		<controllerSize>1</controllerSize>
+		<zIndex>65</zIndex>
+	    </badges>
+
+	    <text name="descriptiontext">
+		<pos>.053 .326</pos>
+		<size>0.4 0.15</size>
+		<metadata>description</metadata>
+		<fontSize>0.024</fontSize>
+		<lineSpacing>1.1</lineSpacing>
+		<color>BBBBBB</color>
+		<verticalAlignment>top</verticalAlignment>
+		<container>true</container>
+		<zIndex>46</zIndex>
+	    </text>
+
+	     <video name="gamelistbackgroundvideo">
+		<pos>0.053 0.6725</pos>
+		<size>0 0.4</size>
+		<origin>0 0.5</origin>
+		<imageType>cover</imageType>
+		<delay>2</delay>
+		<zIndex>46</zIndex>
+	    </video>
+
+	    <carousel name="gamelistCarousel">
+		<pos>0 0</pos>
+		<size>1.45 1</size>
+		<type>verticalWheel</type>
+		<imageType>marquee</imageType>
+		<itemsBeforeCenter>5</itemsBeforeCenter>
+		<itemsAfterCenter>5</itemsAfterCenter>
+		<itemSize>0.15 0.125</itemSize>
+		<itemScale>1.5</itemScale>
+		<itemRotation>-7</itemRotation>
+		<imageInterpolation>linear</imageInterpolation>
+		<itemRotationOrigin>4.03 0.5</itemRotationOrigin>
+		<itemAxisHorizontal>true</itemAxisHorizontal>
+		<itemHorizontalAlignment>center</itemHorizontalAlignment>
+		<itemVerticalAlignment>center</itemVerticalAlignment>
+		<wheelHorizontalAlignment>left</wheelHorizontalAlignment>
+		<horizontalOffset>0.50</horizontalOffset>
+		<fastScrolling>true</fastScrolling>
+		<color>00000000</color>
+		<textColor>BBBBBB</textColor>
+		<fontSize>0.046</fontSize>
+		<letterCase>uppercase</letterCase>
+		<lineSpacing>1.2</lineSpacing>
+		<unfocusedItemOpacity>1</unfocusedItemOpacity>
+		<zIndex>50</zIndex>
+	    </carousel>
+
+	    <gamelistinfo name="gamelistInfo">
+		<pos>0.9 0.95</pos>
+		<size>w 0.02</size>
+		<fontSize>0.025</fontSize>
+		<fontPath>${rootpath}/_inc/fonts/Exo2-RegularCondensed.otf</fontPath>
+		<horizontalAlignment>right</horizontalAlignment>
+		<verticalAlignment>bottom</verticalAlignment>
+		<color>BBBBBB</color>
+		<zIndex>65</zIndex>
+	    </gamelistinfo>
+
+	    <image name="systemlogo">
+		<pos>.015 .94</pos>
+		<origin>0 .5</origin>
+		<maxSize>.16 .1</maxSize>
+		<path>${rootpath}/_inc/systems/logos/${system.theme}.svg</path>
+		<default>${rootpath}/_inc/systems/logos/${system.theme}.png</default>
+		<interpolation>linear</interpolation>
+		<zIndex>56</zIndex>
+	     </image>
+
+	    <image name="wideoverlayleft">
+		<pos>0 0</pos>
+		<size>0 1</size>
+		<path>${rootpath}/_inc/images/wideoverlayleft.png</path>
+		<zIndex>11</zIndex>
+	    </image>
+	</view>
+
+	<view name="system, gamelist">
+	    <helpsystem name="help">
+		<pos>0.5 0.96</pos>
+		<origin>0.5 0</origin>
+		<textColor>FFFFFF</textColor>
+		<iconColor>FFFFFF</iconColor>
+		<fontSize>0.025</fontSize>
+		<fontPath>${rootpath}/_inc/fonts/Exo2-RegularCondensed.otf</fontPath>
+		<iconTextSpacing>0.003</iconTextSpacing>
+		<originDimmed>0.5 0</originDimmed>
+		<posDimmed>0.5 0.96</posDimmed>
+		<opacity>.35</opacity>
+	    </helpsystem>
+	</view>
 
     <aspectRatio name="4:3">
-        <view name="gamelist">
-            <image name="players-icon">
-                <pos>.175 .273</pos>
-            </image>
-            <text name="players">
-                <pos>.2 .273</pos>
-                <size>.03 .03</size>
-            </text>
-            <badges name="badges">
-                <pos>.24 .273</pos>
-            </badges>
+	<view name="gamelist">
+	    <image name="players-icon">
+		<pos>.175 .273</pos>
+	    </image>
+	    <text name="players">
+		<pos>.2 .273</pos>
+		<size>.03 .03</size>
+	    </text>
+	    <badges name="badges">
+		<pos>.24 .273</pos>
+	    </badges>
 
-            <carousel name="gamelistCarousel">
-                <itemSize>0.2 0.125</itemSize>
-                <horizontalOffset>0.45</horizontalOffset>
-            </carousel>
+	    <carousel name="gamelistCarousel">
+		<itemSize>0.2 0.125</itemSize>
+		<horizontalOffset>0.45</horizontalOffset>
+	    </carousel>
 
-            <helpsystem name="help">
-                <pos>0.53 0.96</pos>
-            </helpsystem>
-        </view>
+	    <helpsystem name="help">
+		<pos>0.53 0.96</pos>
+	    </helpsystem>
+	</view>
     </aspectRatio>
     </theme>
